@@ -8,7 +8,7 @@ struct UserListView: View {
             if !viewModel.isGridView {
                 List(viewModel.users) { user in
                     NavigationLink(destination: UserDetailView(user: user)) {
-                        HStack {
+                        HStack {// Commentaire
                             UserAvatarView(url: user.picture.medium, size: 50)
                             
                             VStack(alignment: .leading) {
