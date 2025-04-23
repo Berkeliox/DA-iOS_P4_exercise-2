@@ -12,7 +12,12 @@ class UserListViewModel: ObservableObject {
     @Published var users: [User] = [] // Les utilisateurs à afficher
     @Published var isLoading = false // Pour voir si on charge des données
     @Published var isGridView = false // Si on voit une liste par exemple
-    private let repository = UserListRepository() // Là où on récupère les utilisateurs à afficher
+    
+    private let repository: UserListRepositoryProtocol
+
+    init(repository: UserListRepositoryProtocol = UserListRepository()) {
+        self.repository = repository
+    }
     
     // Déplacé ici car c'est de la logique aussi
     @MainActor // Exécute en MainThread malgré le Task

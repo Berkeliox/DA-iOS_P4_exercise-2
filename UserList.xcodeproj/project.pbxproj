@@ -11,6 +11,7 @@
 		190229672D91565500965268 /* UserListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190229642D91565500965268 /* UserListResponse.swift */; };
 		1902296B2D91595300965268 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1902296A2D91595300965268 /* UserListViewModel.swift */; };
 		199555252D983F4F009D5203 /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199555242D983F4F009D5203 /* UserListViewModelTests.swift */; };
+		19AB3C712DB8D469000C1D70 /* FakeUserListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB3C702DB8D469000C1D70 /* FakeUserListRepository.swift */; };
 		2F015BA82ACC938F009A098C /* UserListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F015BA72ACC938F009A098C /* UserListRepositoryTests.swift */; };
 		2F6F65332ACD69290011B439 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F65322ACD69290011B439 /* Readme.md */; };
 		2F804AE22ACC976300A46A03 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F804AE12ACC976300A46A03 /* UserDetailView.swift */; };
@@ -37,6 +38,7 @@
 		190229642D91565500965268 /* UserListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListResponse.swift; sourceTree = "<group>"; };
 		1902296A2D91595300965268 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		199555242D983F4F009D5203 /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
+		19AB3C702DB8D469000C1D70 /* FakeUserListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserListRepository.swift; sourceTree = "<group>"; };
 		2F015BA72ACC938F009A098C /* UserListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRepositoryTests.swift; sourceTree = "<group>"; };
 		2F6F65322ACD69290011B439 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		2F804AE12ACC976300A46A03 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				2F015BA72ACC938F009A098C /* UserListRepositoryTests.swift */,
 				199555242D983F4F009D5203 /* UserListViewModelTests.swift */,
+				19AB3C702DB8D469000C1D70 /* FakeUserListRepository.swift */,
 				2FB4823B2ACC98DD0016CBA7 /* UserList.xctestplan */,
 			);
 			path = UserListTests;
@@ -273,6 +276,7 @@
 			files = (
 				2F015BA82ACC938F009A098C /* UserListRepositoryTests.swift in Sources */,
 				199555252D983F4F009D5203 /* UserListViewModelTests.swift in Sources */,
+				19AB3C712DB8D469000C1D70 /* FakeUserListRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

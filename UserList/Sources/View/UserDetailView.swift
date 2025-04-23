@@ -1,3 +1,10 @@
+//
+//  UserDetailView.swift
+//  UserDetail
+//
+//  Created by Jean-Hugues on 24/03/2025.
+//
+
 import SwiftUI
 
 struct UserDetailView: View {

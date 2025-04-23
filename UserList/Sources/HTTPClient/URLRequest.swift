@@ -1,3 +1,10 @@
+//
+//  URLRequest.swift
+//  URL
+//
+//  Created by Jean-Hugues on 24/03/2025.
+//
+
 import Foundation
 
 extension URLRequest {

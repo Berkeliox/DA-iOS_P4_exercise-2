@@ -1,3 +1,10 @@
+//
+//  UserListResponse.swift
+//  User
+//
+//  Created by Jean-Hugues on 24/03/2025.
+//
+
 import Foundation
 
 struct UserListResponse: Codable {
