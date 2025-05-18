@@ -61,32 +61,4 @@ final class UserListRepositoryTests: XCTestCase {
         XCTAssertNotNil(viewModel.errorMessage)
     }
 
-    
-//
-//    // Unhappy path test case: Invalid JSON response
-//    func testFetchUsersInvalidJSONResponse() async throws {
-//        // Given
-//        let invalidJSONData = "invalid JSON".data(using: .utf8)!
-//        let invalidJSONResponse = HTTPURLResponse(
-//            url: URL(string: "https://example.com")!,
-//            statusCode: 200,
-//            httpVersion: nil,
-//            headerFields: nil
-//        )!
-//
-//        let mockExecuteDataRequest: (URLRequest) async throws -> (Data, URLResponse) = { _ in
-//            return (invalidJSONData, invalidJSONResponse)
-//        }
-//        
-//        let repository = UserListRepository(executeDataRequest: mockExecuteDataRequest)
-//        
-//        // When
-//        do {
-//            _ = try await repository.fetchUsers(quantity: 2)
-//            XCTFail("Response should fail")
-//        } catch {
-//            // Then
-//            XCTAssertTrue(error is DecodingError)
-//        }
-//    }
 }

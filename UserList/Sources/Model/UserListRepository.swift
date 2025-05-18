@@ -43,29 +43,3 @@ struct UserListRepository: UserListRepositoryProtocol {
         return response.results.map(User.init)
     }
 }
-
-//private extension UserListViewModelTests {
-//    func mockRepositoryWithUsers() -> UserListRepository {
-//        let mockExecuteDataRequest: (URLRequest) async throws -> (Data, URLResponse) = { _ in
-//            // Crée des données d'utilisateur mockées
-//            let sampleJSON = """
-//                {
-//                    "results": [
-//                        {
-//                            "name": { "first": "John", "last": "Doe" },
-//                            "dob": { "date": "1990-01-01", "age": 31 },
-//                            "picture": { "large": "https://example.com/large.jpg" }
-//                        }
-//                    ]
-//                }
-//            """
-//            
-//            let data = sampleJSON.data(using: .utf8)!
-//            let response = HTTPURLResponse(url: URL(string: "https://example.com")!,
-//                                           statusCode: 200, httpVersion: nil, headerFields: nil)!
-//            return (data, response)
-//        }
-//        
-//        return UserListRepository(executeDataRequest: mockExecuteDataRequest)
-//    }
-//}
