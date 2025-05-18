@@ -10,35 +10,42 @@ import Foundation
 class UserListViewModel: ObservableObject {
     // Quand on change ici, UserListView observe cet objet et capte les changements
     @Published var users: [User] = [] // Les utilisateurs à afficher
-    @Published var isLoading = false // Pour voir si on charge des données
-    @Published var isGridView = false // Si on voit une liste par exemple
+    @Published var isLoading: Bool = false // Pour voir si on charge des données
+    @Published var isGridView: Bool = false // Si on voit une liste par exemple
     
+    @Published var errorMessage: String? // Pour le test des
+
+    
+    // Pas de valeur par défaut mais on la déclare grâce à l'init
     private let repository: UserListRepositoryProtocol
 
-    init(repository: UserListRepositoryProtocol = UserListRepository()) {
+    // Besoin de ça pour qu'il puisse changer de repository, et ne pas dépendre que de l'API parce que pour les tests c'est pas bien
+    init(repository: UserListRepositoryProtocol) {
         self.repository = repository
     }
     
-    // Déplacé ici car c'est de la logique aussi
-    @MainActor // Exécute en MainThread malgré le Task
+    
+    @MainActor
     func fetchUsers() async {
         isLoading = true
-        Task { // Autre manière d'appeler le thread en background | Obligé de le faire en BG puisque c'est un téléchargement mais du coup MainActor
-            do {
-                let users = try await repository.fetchUsers(quantity: 20)
-                self.users.append(contentsOf: users)
-                isLoading = false
-            } catch {
-                print("Error fetching users: \(error.localizedDescription)")
-            }
+        do {
+            let fetchedUsers = try await repository.fetchUsers(quantity: 10)
+            self.users.append(contentsOf: fetchedUsers)
+            self.isLoading = false
+            self.errorMessage = nil // on efface l'erreur s'il y a du succès
+        } catch {
+            self.isLoading = false
+            self.errorMessage = "Une erreur est survenue lors du chargement."
         }
     }
+
     
     // Ça c'est une func qu'on avait dans View qu'on transforme en Output (sortie)
-    var shouldLoadMoreData: Bool {
-        guard let lastItem = users.last else { return false }
-        return !isLoading && lastItem.id == users.last?.id
+    func shouldLoadMoreData(currentItem: User) -> Bool {
+        guard let last = users.last else { return false }
+        return !isLoading && currentItem.id == last.id
     }
+
     
     // Pour reload, on doit d'abord supprimer tous les users puis exécuter la fonction fetchUsers
     @MainActor
@@ -48,10 +55,3 @@ class UserListViewModel: ObservableObject {
     }
     
 }
-
-/* On appelle ici la fonction fetchUsers dans Repository pour obtenir les utilisateurs (pour pas que ce soit la Vue qu'il l'ai directement). En gros, c'est la méthode pour les récupérer.
- J'avais déjà mis la func dedans mais je la supprime pour ne pas avoir 2 func fetchUsers
- 
-func fetchUsers() {
-    self.users = repository.fetchUsers()
-}*/
