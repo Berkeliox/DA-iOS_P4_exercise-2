@@ -10,6 +10,7 @@ import XCTest
 @testable import UserList
 
 final class UserListViewModelTests: XCTestCase {
+    
     var viewModel: UserListViewModel!
     var mockData: MockData = MockData()
     var repository: UserListRepository!
@@ -65,7 +66,5 @@ final class UserListViewModelTests: XCTestCase {
         for user in viewModel.users {
             XCTAssertFalse(initialUsers.contains(where: { $0.id == user.id }))
         }
-
     }
- 
 }

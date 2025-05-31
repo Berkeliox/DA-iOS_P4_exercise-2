@@ -13,6 +13,7 @@
 		19B900A12DDA402B00841B1C /* UserListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B900A02DDA402A00841B1C /* UserListRepositoryTests.swift */; };
 		19B900A32DDA405700841B1C /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B900A22DDA405700841B1C /* UserListViewModelTests.swift */; };
 		19B900A52DDA405E00841B1C /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B900A42DDA405E00841B1C /* MockData.swift */; };
+		19B900A72DDA450200841B1C /* UserAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B900A62DDA450200841B1C /* UserAvatarView.swift */; };
 		2F6F65332ACD69290011B439 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F65322ACD69290011B439 /* Readme.md */; };
 		2F804AE22ACC976300A46A03 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F804AE12ACC976300A46A03 /* UserDetailView.swift */; };
 		2FEF0C712ACB45E3004DB87C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF0C702ACB45E3004DB87C /* User.swift */; };
@@ -40,6 +41,7 @@
 		19B900A02DDA402A00841B1C /* UserListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRepositoryTests.swift; sourceTree = "<group>"; };
 		19B900A22DDA405700841B1C /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
 		19B900A42DDA405E00841B1C /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		19B900A62DDA450200841B1C /* UserAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvatarView.swift; sourceTree = "<group>"; };
 		2F6F65322ACD69290011B439 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		2F804AE12ACC976300A46A03 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		2FB4823B2ACC98DD0016CBA7 /* UserList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserList.xctestplan; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		190229682D91568800965268 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19B900A62DDA450200841B1C /* UserAvatarView.swift */,
 				2FFB64272AC6D255007F2F80 /* UserListApp.swift */,
 				2FFB64292AC6D255007F2F80 /* UserListView.swift */,
 				2F804AE12ACC976300A46A03 /* UserDetailView.swift */,
@@ -260,6 +263,7 @@
 			files = (
 				2FF9D91D2ACB3D8800F3A6C5 /* HTTPMethod.swift in Sources */,
 				2FF9D91B2ACB3CE600F3A6C5 /* URLRequest.swift in Sources */,
+				19B900A72DDA450200841B1C /* UserAvatarView.swift in Sources */,
 				2FFB642A2AC6D255007F2F80 /* UserListView.swift in Sources */,
 				2F804AE22ACC976300A46A03 /* UserDetailView.swift in Sources */,
 				1902296B2D91595300965268 /* UserListViewModel.swift in Sources */,

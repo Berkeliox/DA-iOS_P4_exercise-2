@@ -60,5 +60,4 @@ final class UserListRepositoryTests: XCTestCase {
         XCTAssertTrue(viewModel.users.isEmpty)
         XCTAssertNotNil(viewModel.errorMessage)
     }
-
 }

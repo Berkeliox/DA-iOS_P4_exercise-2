@@ -11,6 +11,7 @@ import Foundation
 @testable import UserList // Importer le projet
 
 class MockData {
+    
     let userMock1: UserListResponse.User
     let userMock2: UserListResponse.User
     let userListResponseMock: UserListResponse

@@ -12,7 +12,6 @@ protocol UserListRepositoryProtocol {
     func fetchUsers(quantity: Int) async throws -> [User]
 }
 
-
 struct UserListRepository: UserListRepositoryProtocol {
 
     private let executeDataRequest: (URLRequest) async throws -> (Data, URLResponse)
@@ -37,7 +36,7 @@ struct UserListRepository: UserListRepositoryProtocol {
         )
 
         let (data, _) = try await executeDataRequest(request)
-
+        
         let response = try JSONDecoder().decode(UserListResponse.self, from: data)
         
         return response.results.map(User.init)

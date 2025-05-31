@@ -1,4 +1,13 @@
-// Refacto de AsyncImage
+//
+//  UserAvatarView.swift
+//  UserList
+//
+//  Created by Jean-Hugues on 18/05/2025.
+//
+
+import SwiftUI
+
+// Refacto
 struct UserAvatarView: View {
     let url: String
     let size: CGFloat

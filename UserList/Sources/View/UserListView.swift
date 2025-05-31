@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct UserListView: View {
+    
     let repository: UserListRepositoryProtocol = UserListRepository()
     @StateObject var viewModel: UserListViewModel // On observe ce qu'il se passe dans ce fichier ViewModel
     
     var body: some View {
+        
         NavigationView {
             Group {
                 if viewModel.isGridView {
@@ -52,7 +54,6 @@ struct UserListView: View {
         }
     }
 
-    
     @ViewBuilder
     private func listView() -> some View {
         List(viewModel.users) { user in
@@ -102,32 +103,10 @@ struct UserListView: View {
             }
         }
     }
-
-    
 }
 
 struct UserListView_Previews: PreviewProvider {
     static var previews: some View {
         UserListView(viewModel: UserListViewModel(repository: UserListRepository()))
-    }
-}
-
-// Refacto de AsyncImage
-struct UserAvatarView: View {
-    let url: String
-    let size: CGFloat
-    
-    var body: some View {
-        AsyncImage(url: URL(string: url)) { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: size, height: size)
-                .clipShape(Circle())
-        } placeholder: {
-            ProgressView()
-                .frame(width: size, height: size)
-                .clipShape(Circle())
-        }
     }
 }
